@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Frontline — Coming Soon</title>
+<meta name="description" content="Financial Frontline. Built. Not born. Real language. Real charts. Real losses too. Launching soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1E3D;
+    --navy-deep: #071429;
+    --gold: #C9A844;
+    --cream: #F3EFE6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--navy);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Ghosted FF wordmark bleeding into background */
+  .ghost-ff {
+    position: absolute;
+    top: 50%;
+    right: -4vw;
+    transform: translateY(-50%);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 62vw;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(201, 168, 68, 0.14);
+    letter-spacing: -0.04em;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    white-space: nowrap;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vh 6vw;
+    max-width: 1400px;
+  }
+
+  /* Tilted badge breaking the grid */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 84px;
+    background: var(--gold);
+    color: var(--navy-deep);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.03em;
+    transform: rotate(-6deg);
+    margin-bottom: 42px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: clamp(48px, 9vw, 108px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    max-width: 14ch;
+  }
+
+  .tagline {
+    margin-top: 26px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(17px, 1.6vw, 21px);
+    line-height: 1.55;
+    color: rgba(243, 239, 230, 0.72);
+    max-width: 34ch;
+  }
+
+  .cta-row {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--navy-deep);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    padding: 16px 28px;
+    border-radius: 2px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cta:hover, .cta:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(201, 168, 68, 0.28);
+  }
+
+  .cta:focus-visible {
+    outline: 2px solid var(--cream);
+    outline-offset: 3px;
+  }
+
+  .cta-note {
+    font-size: 13px;
+    color: rgba(243, 239, 230, 0.5);
+  }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    padding: 0 6vw 5vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: rgba(243, 239, 230, 0.4);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cta { transition: none; }
+  }
+
+  @media (max-width: 640px) {
+    .ghost-ff {
+      font-size: 90vw;
+      right: -8vw;
+      top: 30%;
+    }
+    .wrap {
+      padding: 10vh 7vw 6vh;
+    }
+    footer {
+      padding: 0 7vw 4vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="ghost-ff" aria-hidden="true">FF</div>
+
+  <main class="wrap">
+    <div class="badge" aria-hidden="true">FF</div>
+    <p class="eyebrow">Financial Frontline</p>
+    <h1>BUILT.<br>NOT BORN.</h1>
+    <p class="tagline">Real language. Real charts. Real losses too. The site is being built the same way the brand was &mdash; one honest session at a time.</p>
+
+    <div class="cta-row">
+      <a class="cta" href="https://t.me/officialffsetup" target="_blank" rel="noopener">Join us on Telegram</a>
+      <span class="cta-note">First look at what's coming, before it's live here.</span>
+    </div>
+  </main>
+
+  <footer>
+    <span>Financial Frontline</span>
+    <span>financialfrontline.co.in</span>
+  </footer>
+
+</body>
+</html>
