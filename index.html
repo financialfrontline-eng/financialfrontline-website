@@ -243,25 +243,35 @@
 
   /* START HERE */
   .start-here { padding: 100px 6vw; background: var(--cream); }
-  .start-here-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+  .start-here-inner { max-width: 1040px; margin: 0 auto; text-align: center; }
   .start-here h2 {
     font-family: 'Space Grotesk', sans-serif; font-weight: 700;
     font-size: clamp(32px, 4vw, 48px); margin-bottom: 18px;
   }
   .start-here-lead { font-size: 16px; color: var(--muted); line-height: 1.6; margin-bottom: 48px; }
+  .start-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 800px) { .start-grid { grid-template-columns: 1fr; } }
   .start-card {
     background: var(--charcoal); border-radius: 20px; padding: 56px 44px; text-align: left;
+    display: flex; flex-direction: column;
   }
+  .start-card.light { background: linear-gradient(150deg, var(--sun), var(--orange)); }
   .start-tag {
     display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
     color: var(--market-green); background: rgba(30,123,77,0.15); padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+    width: fit-content;
   }
+  .start-tag.dark { color: var(--ink); background: rgba(10,10,10,0.12); }
   .start-card h3 { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; color: #fff; margin-bottom: 14px; }
+  .start-card.light h3 { color: var(--ink); }
   .start-card p { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.65); max-width: 52ch; margin-bottom: 30px; }
+  .start-card.light p { color: rgba(10,10,10,0.7); }
+  .start-card-foot { margin-top: auto; }
   .start-btn {
     display: inline-block; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px;
     padding: 15px 32px; border-radius: 30px; background: var(--orange); color: var(--ink);
   }
+  .start-card.light .start-btn { background: var(--ink); color: var(--cream); }
   .start-here-note { margin-top: 30px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
 
   /* TESTIMONIALS */
@@ -470,11 +480,23 @@
     <div class="eyebrow">// start here</div>
     <h2>Where to begin.</h2>
     <p class="start-here-lead">One place to actually start. No tiers to compare, no fine print, just what's live right now.</p>
-    <div class="start-card">
-      <span class="start-tag">Live now</span>
-      <h3>FF Knights</h3>
-      <p>A members-only daily video, plus a weekly live educational session. Real teaching, real Q&amp;A, no tips handed out. Runs through YouTube Membership.</p>
-      <a class="start-btn" href="https://www.youtube.com/channel/UCL7sH-JXh-3PN-iBS5lFDmw/join" target="_blank" rel="noopener">Join FF Knights</a>
+    <div class="start-grid">
+      <div class="start-card">
+        <span class="start-tag">Live now</span>
+        <h3>FF Knights</h3>
+        <p>A members-only daily video, plus a weekly live educational session. Real teaching, real Q&amp;A, no tips handed out. Runs through YouTube Membership.</p>
+        <div class="start-card-foot">
+          <a class="start-btn" href="https://www.youtube.com/channel/UCL7sH-JXh-3PN-iBS5lFDmw/join" target="_blank" rel="noopener">Join FF Knights</a>
+        </div>
+      </div>
+      <div class="start-card light">
+        <span class="start-tag dark">Self-paced</span>
+        <h3>Short-Term Courses</h3>
+        <p>Focused, recorded courses on a single skill at a time, candlesticks, support &amp; resistance, price action. Learn at your own pace, keep it forever.</p>
+        <div class="start-card-foot">
+          <a class="start-btn" href="/short-term-courses">View Courses</a>
+        </div>
+      </div>
     </div>
     <p class="start-here-note">Education first. Risk first. Independent thinking, always.</p>
   </div>
