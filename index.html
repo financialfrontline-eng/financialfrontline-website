@@ -249,7 +249,8 @@
     font-size: clamp(32px, 4vw, 48px); margin-bottom: 18px;
   }
   .start-here-lead { font-size: 16px; color: var(--muted); line-height: 1.6; margin-bottom: 48px; }
-  .start-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .start-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 1000px) { .start-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 800px) { .start-grid { grid-template-columns: 1fr; } }
   .start-card {
     background: var(--charcoal); border-radius: 20px; padding: 56px 44px; text-align: left;
@@ -272,6 +273,11 @@
     padding: 15px 32px; border-radius: 30px; background: var(--orange); color: var(--ink);
   }
   .start-card.light .start-btn { background: var(--ink); color: var(--cream); }
+  .start-card.hybrid-card { background: #f3efe6; border: 1px solid rgba(10,10,10,0.08); }
+  .start-card.hybrid-card h3 { color: var(--ink); }
+  .start-card.hybrid-card p { color: rgba(10,10,10,0.68); }
+  .start-tag.hybrid-tag { color: var(--ink); background: rgba(10,10,10,0.08); }
+  .start-card.hybrid-card .start-btn { background: var(--orange); color: var(--ink); }
   .start-here-note { margin-top: 30px; font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
 
   /* TESTIMONIALS */
@@ -495,6 +501,14 @@
         <p>Focused, recorded courses on a single skill at a time, candlesticks, support &amp; resistance, price action. Learn at your own pace, keep it forever.</p>
         <div class="start-card-foot">
           <a class="start-btn" href="/short-term-courses">View Courses</a>
+        </div>
+      </div>
+      <div class="start-card hybrid-card">
+        <span class="start-tag hybrid-tag">Online + Offline</span>
+        <h3>Hybrid Classes</h3>
+        <p>Structured market education with the flexibility to learn online or join us in the classroom. Same learning framework, two ways to learn.</p>
+        <div class="start-card-foot">
+          <a class="start-btn" href="/hybrid-classes">Explore Classes</a>
         </div>
       </div>
     </div>
